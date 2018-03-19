@@ -1,0 +1,29 @@
+require(rvest)
+require(tidyverse)
+
+options(encoding="UTF-8")
+addr<-"http://www.ftchinese.com/search/?keys=%E5%8C%BA%E5%9D%97%E9%93%BE&type=relative_tag&category="
+
+ggl<-"https://www.google.com.sg/search?q=%E5%8C%BA%E5%9D%97%E9%93%BE+site:ftchinese.com&hl=zh-CN&start="
+
+ggl<-"https://www.google.com.sg/search?q=%E5%8C%BA%E5%9D%97%E9%93%BE+site:ftchinese.com&hl=zh-CN&dcr=0&ei=G4CrWoaqKMT2vgSDyrLwCQ&start=10&sa=N&biw=1143&bih=775"
+read_html(ggl) %>% 
+  html_nodes("cite") %>% 
+  html_text()
+
+aa<-read_html(ggl,encoding="GB2312")%>%html_nodes("h3")%>%html_text
+
+
+
+
+ggl<-"https://www.google.com.sg/search?q=%E5%8C%BA%E5%9D%97%E9%93%BE+site:ftchinese.com&hl=zh-CN&start="
+
+
+
+str_c(ggl,0:9*10)%>%
+  map(~read_html(.,encoding="GB2312")%>%
+  html_nodes("h3")%>%html_text)%>%unlist
+
+str_c(ggl,0:9*10)%>%
+  map(~read_html(.,encoding="GB2312")%>%
+        html_nodes("h3")%>%html_text)%>%unlist

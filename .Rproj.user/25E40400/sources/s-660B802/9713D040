@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1521251483211.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9713D040",
+    "lastKnownWriteTime" : 1521193496,
+    "last_content_update" : 1521193496,
+    "path" : "~/Documents/Projects/newscrawler/temp.R",
+    "project_path" : "temp.R",
+    "properties" : {
+        "cursorPosition" : "6,87",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

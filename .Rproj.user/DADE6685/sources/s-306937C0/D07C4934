@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1521190267864.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D07C4934",
+    "lastKnownWriteTime" : 1521193483,
+    "last_content_update" : 1521193483498,
+    "path" : "D:/bdtest/newscrawler/crawler 1.R",
+    "project_path" : "crawler 1.R",
+    "properties" : {
+        "cursorPosition" : "26,3",
+        "scrollLine" : "2",
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
