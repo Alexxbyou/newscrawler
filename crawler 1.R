@@ -59,3 +59,27 @@ site.list<-c(
   "moer.cn",    #  摩尔金融
   "www.hexun.com" #  和讯网
 )
+
+top.gglnews.daily<-function(SearchTerm,lang="zh-CH",date=Sys.Date(),country="CN",N=20){
+  date<-as.Date(date)
+  start<-format(date-1,"%m/%d/%Y")
+  end<-format(date,"%m/%d/%Y")
+  encoding<-ifelse(lang=="zh-CH","GB2312","UTF-8")
+  addr.head<-str_c(
+    "https://www.google.com.sg/search?",
+    "tbm=nws",          # News search
+    "&num=",  N,       # N result in one page
+    "&q=",SearchTerm,   # Search Term
+    "&tbs=ctr:country",country,   # Country
+    "&hl=",lang,        # Language
+    "&tbs=cdr:1,cd_min:", start,",cd_max:",end  # Search date
+  )%>%URLencode
+  top.news<-read_html(addr.head,encoding=encoding)%>%
+    extract.list%>%
+    mutate(Date=date)
+  return(top.news)
+}
+
+top.gglnews.daily.en<-function(SearchTerm,lang="en",date=Sys.Date(),country="SG",N=20)top.gglnews.daily(SearchTerm,lang,date,country,N)
+
+
